@@ -127,3 +127,18 @@ console.log(message3);
 const [ name2, age2 ] = myArray;
 const message4 = `Name: ${name2}, Age: ${age2}.`;
 console.log(message4);
+
+
+
+/**
+ * デフォルト値、引数など
+ */
+console.log("-------------------------------------------------");
+console.log("               デフォルト値、引数など               ");
+console.log("-------------------------------------------------");
+// ↓の場合だと引数が何もないとnameにはundefinedが入る
+// const sayHello = (name) => console.log(`こんにちは！${name}さん！`);
+// sayHello();
+// nameの後に=を書いて設定したい値を書く
+const sayHello = (name="Guest") => console.log(`こんにちは！${name}さん！`);
+sayHello("まさや");
