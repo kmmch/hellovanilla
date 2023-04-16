@@ -50,3 +50,19 @@ val5[0] = "bird";
 console.log(val5);
 val5.push("monkey");
 console.log(val5);
+
+
+/**
+ * テンプレート文字列
+ */
+// 文字列の中にJsの変数を埋め込める
+const myname = "まさや";
+const myage = 26;
+
+// 私の名前は「まさや」です。年齢は「28」歳です。
+// 従来
+const before = "私の名前は" + myname + "です。年齢は" + myage + "歳です。";
+console.log("Before : "+before);
+// テンプレート文字列
+const after = `私の名前は${myname}です。年齢は${myage}歳です。`;
+console.log("After  : "+after);
