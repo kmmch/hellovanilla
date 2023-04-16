@@ -1,6 +1,9 @@
 /**
  * const. let等の変数宣言
  */
+console.log("--------------------------------------------------");
+console.log("               const. let等の変数宣言               ");
+console.log("--------------------------------------------------");
 var val1 = "var変数";
 console.log(val1);
 
@@ -52,10 +55,14 @@ val5.push("monkey");
 console.log(val5);
 
 
+
 /**
  * テンプレート文字列
  */
 // 文字列の中にJsの変数を埋め込める
+console.log("---------------------------------------------");
+console.log("               テンプレート文字列               ");
+console.log("---------------------------------------------");
 const myname = "まさや";
 const myage = 26;
 
@@ -66,3 +73,31 @@ console.log("Before : "+before);
 // テンプレート文字列
 const after = `私の名前は${myname}です。年齢は${myage}歳です。`;
 console.log("After  : "+after);
+
+
+
+/**
+ * アロー関数
+ */
+console.log("--------------------------------------");
+console.log("               アロー関数               ");
+console.log("--------------------------------------");
+// 従来の関数
+function beforeFunc(str) {
+  return str;
+}
+console.log(beforeFunc("hello!!!"));
+
+// アロー関数
+const func2 = (str) => {
+  return str;
+}
+console.log(func2("func2です。"));
+
+// returnを省略できる場合
+// -> 処理が1行で終わる場合
+const func3 = (str) => str;
+console.log(func3("func3です。"));
+
+const addNumber = (num1, num2) => num1 + num2;
+console.log(`Result: ${addNumber(1,100)}`);
