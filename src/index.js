@@ -101,3 +101,29 @@ console.log(func3("func3です。"));
 
 const addNumber = (num1, num2) => num1 + num2;
 console.log(`Result: ${addNumber(1,100)}`);
+
+
+
+/**
+ * 分割代入
+ */
+console.log("-------------------------------------");
+console.log("               分割代入               ");
+console.log("-------------------------------------");
+const myProfile = {
+  name:"Masaya",
+  age: 26
+};
+const message = `My name is ${myProfile.name}. My age is ${myProfile.age}.`;
+console.log(message);
+
+const { name, age } = myProfile;
+const message2 = `My name is ${name}. My age is ${age}.`;
+console.log(message2);
+
+const myArray = ['まさや',26];
+const message3 = `Name: ${myArray[0]}, Age: ${myArray[1]}.`;
+console.log(message3);
+const [ name2, age2 ] = myArray;
+const message4 = `Name: ${name2}, Age: ${age2}.`;
+console.log(message4);
