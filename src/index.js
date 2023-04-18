@@ -249,3 +249,48 @@ const checkSum = (num1, num2) => {
   return num1 + num2 > 100 ? '100を超えています' : '許容範囲内です'
 }
 console.log(checkSum(10,10));
+
+
+
+/**
+ * 論理演算氏の本当の意味を知ろう && ||
+ */
+console.log("---------------------------------------------------------------");
+console.log("               論理演算氏の本当の意味を知ろう && ||               ");
+console.log("---------------------------------------------------------------");
+const flag1 = true;
+const flag2 = false;
+
+if(flag1 || flag2) {
+  console.log("1か2はtrue");
+} else {
+  console.log("1も2もtrueでない");
+}
+
+if(flag1 && flag2) {
+  console.log("1も2もtrue");
+} else {
+  console.log("1または2はtrueでない");
+}
+
+// 実は、&& || は「または」「かつ」という意味ではない
+
+// || は左側がfalseのとき右側を返す・・・★
+// 左側がtrueなら左側を返す
+const num3 = null;
+const fee = num3 || "金額未設定";
+console.log(fee);
+// -> nu3はnull=trueでない=falseなので金額未設定が返ってくる
+
+
+// if(flag1 || flag2) {
+//   console.log("1か2はtrue");
+// }
+// 左側がfalseの場合、右側を返す=trueなのでif文の条件をクリアできる
+// 左側がtrueであれば、そのまま左側が返されてif文の条件をクリアできる
+
+
+const num4 = null;
+const fee2 = num4 && "何か設定されました";
+console.log(fee2);
+// &&は左側がtrueなら右側を返す
