@@ -223,3 +223,29 @@ const newNameArr = nameArr.map((name) => {
   }
 });
 console.log(newNameArr);
+
+
+
+/**
+ * 三項演算子
+ */
+console.log("---------------------------------------");
+console.log("               三項演算子               ");
+console.log("---------------------------------------");
+// ES2015の新しいものではないがReactでよく使う
+// 使いすぎると可読性が悪くなる
+
+// ある条件 ? 条件に一致する場合 : 条件に一致しない場合
+const val6 = 1 > 0 ? true : false;
+console.log(val6);
+// if-elseを1行で書ける
+
+const num = 1300;
+// console.log(num.toLocaleString()); // 数値型を3桁ごとにカンマつける
+const formattedNum = typeof num === 'number' ? num.toLocaleString() : "数値を入力してください。";
+console.log(formattedNum);
+
+const checkSum = (num1, num2) => {
+  return num1 + num2 > 100 ? '100を超えています' : '許容範囲内です'
+}
+console.log(checkSum(10,10));
